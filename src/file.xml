@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_LXnGoBrzEeeNUNu8TqCutw" name="RootElement">
+    <packagedElement xmi:type="uml:Actor" xmi:id="ID_USER_ACTOR" name="User"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="ID_PAYMENT_SYSTEM_ACTOR" name="Payment System"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="ID_RESTAURANT_ACTOR" name="Restaurant"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_CREATE_ORDER" name="Create Order">
+        <include xmi:type="uml:Include" xmi:id="_80HLgBrzEeeNUNu8TqCutw" addition="ID_SELECT_RESTAURANT"/>
+        <include xmi:type="uml:Include" xmi:id="__HN2kBrzEeeNUNu8TqCutw" addition="ID_CHOOSE_MENU"/>
+        <include xmi:type="uml:Include" xmi:id="_AgJYYBr0EeeNUNu8TqCutw" addition="ID_SELECT_MEAL"/>
+        <include xmi:type="uml:Include" xmi:id="_B1hP4Br0EeeNUNu8TqCutw" addition="ID_SUBMIT_ORDER"/>
+        <include xmi:type="uml:Include" xmi:id="_GKirMBr7EeeNUNu8TqCutw" addition="ID_LOGIN"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_SELECT_RESTAURANT" name="Select Restaurant"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_CHOOSE_MENU" name="Choose Menu"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_SELECT_MEAL" name="Select Meal"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_SUBMIT_ORDER" name="Submit Order">
+        <include xmi:type="uml:Include" xmi:id="_SRujoBr0EeeNUNu8TqCutw" addition="ID_SEND_ORDER_TO_RESTAURANT"/>
+        <include xmi:type="uml:Include" xmi:id="_Td6p8Br0EeeNUNu8TqCutw" addition="ID_PROVIDE_PAYMENT_INFORMATION"/>
+        <include xmi:type="uml:Include" xmi:id="_zkPT4Br5EeeNUNu8TqCutw" addition="ID_PROCESS_ORDER"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zzZY8BrzEeeNUNu8TqCutw" memberEnd="_zzdDUBrzEeeNUNu8TqCutw _zzdDURrzEeeNUNu8TqCutw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zzb1MBrzEeeNUNu8TqCutw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zzb1MRrzEeeNUNu8TqCutw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zzdDUBrzEeeNUNu8TqCutw" name="create order" type="ID_CREATE_ORDER" association="_zzZY8BrzEeeNUNu8TqCutw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zzdDURrzEeeNUNu8TqCutw" name="user" type="ID_USER_ACTOR" association="_zzZY8BrzEeeNUNu8TqCutw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_HAdqwBr0EeeNUNu8TqCutw" memberEnd="_HAeR0Rr0EeeNUNu8TqCutw _HAe44Br0EeeNUNu8TqCutw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HAdqwRr0EeeNUNu8TqCutw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HAeR0Br0EeeNUNu8TqCutw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_HAeR0Rr0EeeNUNu8TqCutw" name="choose menu" type="ID_CHOOSE_MENU" association="_HAdqwBr0EeeNUNu8TqCutw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_HAe44Br0EeeNUNu8TqCutw" name="restaurant" type="ID_RESTAURANT_ACTOR" association="_HAdqwBr0EeeNUNu8TqCutw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_PROVIDE_PAYMENT_INFORMATION" name="Provide Payment Information">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_uqR7UBr5EeeNUNu8TqCutw" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_SEND_ORDER_TO_RESTAURANT" name="Send Order to Restaurant"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7g728Br0EeeNUNu8TqCutw" memberEnd="_7g9FERr0EeeNUNu8TqCutw _7g9sIBr0EeeNUNu8TqCutw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7g8eABr0EeeNUNu8TqCutw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7g9FEBr0EeeNUNu8TqCutw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_7g9FERr0EeeNUNu8TqCutw" name="send order to restaurant" type="ID_SEND_ORDER_TO_RESTAURANT" association="_7g728Br0EeeNUNu8TqCutw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_7g9sIBr0EeeNUNu8TqCutw" name="restaurant" type="ID_RESTAURANT_ACTOR" association="_7g728Br0EeeNUNu8TqCutw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_PROVIDE_VOUCHER" name="Provide voucher">
+        <extend xmi:type="uml:Extend" xmi:id="_uqQtMBr5EeeNUNu8TqCutw" extendedCase="ID_PROVIDE_PAYMENT_INFORMATION" extensionLocation="_uqR7UBr5EeeNUNu8TqCutw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_PROCESS_ORDER" name="Process Order"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pvZ8wBr5EeeNUNu8TqCutw" memberEnd="_pvaj0hr5EeeNUNu8TqCutw _pvbK4Br5EeeNUNu8TqCutw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pvaj0Br5EeeNUNu8TqCutw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pvaj0Rr5EeeNUNu8TqCutw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_pvaj0hr5EeeNUNu8TqCutw" name="process order" type="ID_PROCESS_ORDER" association="_pvZ8wBr5EeeNUNu8TqCutw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_pvbK4Br5EeeNUNu8TqCutw" name="payment system" type="ID_PAYMENT_SYSTEM_ACTOR" association="_pvZ8wBr5EeeNUNu8TqCutw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="ID_LOGIN" name="Login"/>
+</uml:Model>
